@@ -17,6 +17,7 @@ import AlartMessege from "@/components/home/AlartMessege";
 import axios from "axios";
 import SignatureComponet from "@/components/home/SignatureComponet";
 import { LoadingButton } from "@mui/lab";
+import FooterCopyright from "@/components/home/FooterCopyright";
 
 type Inputs = {
   example: string;
@@ -300,6 +301,7 @@ const Home = () => {
             </LoadingButton>
           </Stack>
         </form>
+        <FooterCopyright />
       </Stack>
     </HomeContainer>
   );
