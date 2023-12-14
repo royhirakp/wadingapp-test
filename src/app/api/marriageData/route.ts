@@ -39,9 +39,9 @@ export const POST = async (req: NextRequest) => {
 
     // // upload signature image
     // try {
-    const url = await cloudinaryUploader(signature, ["signature"]);
+    // const url = await cloudinaryUploader(signature, ["signature"]);
     // console.log("cloudanery url==", url);
-    let imageUrl = url + "";
+    // let imageUrl = url + "";
     // console.log("type of cloudanery res==", typeof url);
     signatureImage = {
       name: signature.name,
