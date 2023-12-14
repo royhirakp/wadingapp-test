@@ -118,59 +118,59 @@ const Home = () => {
   }, [erorrrrrrr]);
 
   const apiCall = useCallback(async () => {
-    console.log("api callll=====");
-    // setLoaderState(true);
-    // try {
-    //   const formData = new FormData();
-    //   let userData = {
-    //     dateOfFillTheForm: watch("dateOfFillTheForm") || "",
-    //     bridePhone: watch("bridePhone") || "",
-    //     brideName: watch("brideName") || "",
-    //     brideEmail: watch("brideEmail") || "",
-    //     brideAddress: watch("brideAddress") || "",
-    //     groomAddress: watch("groomAddress") || "",
-    //     groomEmail: watch("groomEmail") || "",
-    //     groomName: watch("groomName") || "",
-    //     groomPhone: watch("groomPhone") || "",
-    //     anythingExtra: watch("anythingExtra") || "",
-    //     engagementDate: watch("engagementDate") || "",
-    //     weadingDate: watch("weadingDate") || "",
-    //     bidayOrBaronDate: watch("BidayOrBaronDate") || "",
-    //     signature: { name: "RSS", url: "https://agile-rule.name/" },
-    //     receptionDate: watch("receptionDate") || "",
-    //     nameOfThePackege: {
-    //       title: watch("nameOfThePackege").title || "",
-    //       Description: watch("nameOfThePackege").Description || "",
-    //       price: watch("nameOfThePackege").price || "",
-    //     },
-    //     //
-    //     selectPackegeType: watch("SelectPackegeType") || "",
-    //     asirbadGroomDate: watch("asirbadGroomDate") || "",
-    //     asirbadBrideDate: watch("asirbadBrideDate") || "",
-    //     asirbad: watch("asirbad") || "",
-    //     asirbadDate: watch("asirbadDate") || "",
-    //     panakhili: watch("panakhili") || "",
-    //     panakhiliBrideDate: watch("panakhiliBrideDate") || "",
-    //     panakhiliDate: watch("panakhiliDate") || "",
-    //     panakhiliGroomDate: watch("panakhiliGroomDate") || "",
-    //     haldi: watch("haldi") || "",
-    //     haldiBrideDate: watch("haldiBrideDate") || "",
-    //     haldiDate: watch("haldiDate") || "",
-    //     haldiGroomDate: watch("haldiGroomDate") || "",
-    //   };
-    //   formData.append("signature", watch("signature"));
-    //   formData.append("data", JSON.stringify(userData));
-    //   const headers = {
-    //     "Access-Control-Allow-Origin": "*",
-    //   };
-    //   const response = await axios.post("/api/marriageData", formData, {
-    //     headers,
-    //   });
-    //   console.log(response);
-    // } catch (error) {
-    //   console.log("POST ERROR: ", error);
-    // }
-    // setLoaderState(false);
+    // console.log("api callll=====");
+    setLoaderState(true);
+    try {
+      const formData = new FormData();
+      let userData = {
+        dateOfFillTheForm: watch("dateOfFillTheForm") || "",
+        bridePhone: watch("bridePhone") || "",
+        brideName: watch("brideName") || "",
+        brideEmail: watch("brideEmail") || "",
+        brideAddress: watch("brideAddress") || "",
+        groomAddress: watch("groomAddress") || "",
+        groomEmail: watch("groomEmail") || "",
+        groomName: watch("groomName") || "",
+        groomPhone: watch("groomPhone") || "",
+        anythingExtra: watch("anythingExtra") || "",
+        engagementDate: watch("engagementDate") || "",
+        weadingDate: watch("weadingDate") || "",
+        bidayOrBaronDate: watch("BidayOrBaronDate") || "",
+        signature: { name: "RSS", url: "https://agile-rule.name/" },
+        receptionDate: watch("receptionDate") || "",
+        nameOfThePackege: {
+          title: watch("nameOfThePackege").title || "",
+          Description: watch("nameOfThePackege").Description || "",
+          price: watch("nameOfThePackege").price || "",
+        },
+        //
+        selectPackegeType: watch("SelectPackegeType") || "",
+        asirbadGroomDate: watch("asirbadGroomDate") || "",
+        asirbadBrideDate: watch("asirbadBrideDate") || "",
+        asirbad: watch("asirbad") || "",
+        asirbadDate: watch("asirbadDate") || "",
+        panakhili: watch("panakhili") || "",
+        panakhiliBrideDate: watch("panakhiliBrideDate") || "",
+        panakhiliDate: watch("panakhiliDate") || "",
+        panakhiliGroomDate: watch("panakhiliGroomDate") || "",
+        haldi: watch("haldi") || "",
+        haldiBrideDate: watch("haldiBrideDate") || "",
+        haldiDate: watch("haldiDate") || "",
+        haldiGroomDate: watch("haldiGroomDate") || "",
+      };
+      formData.append("signature", watch("signature"));
+      formData.append("data", JSON.stringify(userData));
+      const headers = {
+        "Access-Control-Allow-Origin": "*",
+      };
+      const response = await axios.post("/api/marriageData", formData, {
+        headers,
+      });
+      console.log(response);
+    } catch (error) {
+      console.log("POST ERROR: ", error);
+    }
+    setLoaderState(false);
   }, [watch]);
 
   const consoleError = useCallback(() => {
