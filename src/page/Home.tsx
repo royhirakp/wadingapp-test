@@ -81,18 +81,21 @@ const Home = () => {
     } else {
       setopenSingAndTandC_warnning(true);
     }
-  }, [t_and_c_ckeckboxStacus, watch("signature")]);
+  }, [t_and_c_ckeckboxStacus, watch]);
 
-  const erorrrrrrr = useCallback((name: any) => {
-    if (!watch(name)) {
-      setError(name, {
-        type: "manual",
-        message: `please give your ${name}`,
-      });
-    } else {
-      clearErrors(name);
-    }
-  }, []);
+  const erorrrrrrr = useCallback(
+    (name: any) => {
+      if (!watch(name)) {
+        setError(name, {
+          type: "manual",
+          message: `please give your ${name}`,
+        });
+      } else {
+        clearErrors(name);
+      }
+    },
+    [clearErrors, setError, watch]
+  );
 
   const setErrorMessegeForEmptyField = useCallback(() => {
     // groomPhone
@@ -112,7 +115,7 @@ const Home = () => {
     erorrrrrrr("receptionDate");
     erorrrrrrr("weadingDate");
     erorrrrrrr("engagementDate");
-  }, []);
+  }, [erorrrrrrr]);
 
   const apiCall = useCallback(async () => {
     setLoaderState(true);
@@ -167,7 +170,7 @@ const Home = () => {
       console.log("POST ERROR: ", error);
     }
     setLoaderState(false);
-  }, []);
+  }, [watch]);
 
   const onSubmit = (data: any) => {
     if (watch("signature") && t_and_c_ckeckboxStacus) {
@@ -196,7 +199,7 @@ const Home = () => {
 
     setDate(formattedDate);
     setValue("dateOfFillTheForm", formattedDate);
-  }, []);
+  }, [setValue]);
   return (
     <HomeContainer style={{}}>
       {/*  t and c checkbox and sing mandatory alart */}
