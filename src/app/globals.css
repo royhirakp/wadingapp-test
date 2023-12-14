@@ -1,0 +1,52 @@
+/* @tailwind base; */
+/* @import url("https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:ital,wght@0,100;0,200;1,100&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Moon+Dance&family=Poppins:ital,wght@0,100;0,200;1,100&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Moon+Dance&display=swap");
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+.hoverable-link:hover {
+  border: "5px solid";
+}
+p h1 h2 h3 h4 h5 {
+  font-family: "Moon Dance", cursive;
+  /* font-family: "Poppins", sans-serif; */
+}
+body {
+  /* color: rgb(var(--foreground-rgb)); */
+  /* background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb)); */
+}
+input[type="date"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  border-radius: 0;
+  width: 150px;
+  /* Additional styles can be added as needed */
+}
+
+/* Style for when the date input is focused */
+input[type="date"]:focus {
+  outline: none;
+  border-color: rgb(243, 164, 177);
+  /* Additional styles for focused state */
+}
