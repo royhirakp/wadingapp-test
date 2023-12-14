@@ -41,10 +41,11 @@ export const POST = async (req: NextRequest) => {
     // try {
     const url = await cloudinaryUploader(signature, ["signature"]);
     // console.log("cloudanery url==", url);
+    let imageUrl = url + "";
     // console.log("type of cloudanery res==", typeof url);
     signatureImage = {
       name: signature.name,
-      url: url,
+      url: imageUrl,
       // "https://res.cloudinary.com/de9dp9pv6/image/upload/v1702394425/qfdnauqmp99u2rabowcx.png",
     };
     // } catch (error) {
